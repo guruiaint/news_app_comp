@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Articles{% endblock title %}
+
+{% block content %}
+    <h1>Articles</h1>
+    <ul>
+        {% for article in article_list %}
+        <li>{{ article.title }}
+            {{article.author}}
+        </li>
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+        {% endfor %}
+    </ul>
+{% endblock content %}
